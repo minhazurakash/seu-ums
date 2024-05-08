@@ -1,0 +1,146 @@
+// import app style
+@import './core/index.scss';
+@import 'common';
+@import 'banner_section';
+@import 'variable';
+@import './utilities/index.scss';
+@import 'text';
+// tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@layer base {
+  html {
+    font-family: var(--font-heebo);
+  }
+}
+
+// global style
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+body {
+  font-family: var(--font-heebo);
+  font-weight: 400;
+  font-size: 1rem;
+  color: #515a60;
+  background: #fafafa;
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-weight: 500;
+//   color: #222;
+//   margin-bottom: 15px;
+//   line-height: normal;
+//   font-family: var(--font-heebo);
+// }
+
+// a {
+//   -webkit-transition: all 0.3s ease-out 0s;
+//   -moz-transition: all 0.3s ease-out 0s;
+//   -ms-transition: all 0.3s ease-out 0s;
+//   -o-transition: all 0.3s ease-out 0s;
+//   transition: all 0.3s ease-out 0s;
+//   text-decoration: none;
+//   font-family: var(--font-heebo);
+// }
+// a:hover {
+//   color: var(--primaryColor);
+// }
+
+// a:focus,
+// input:focus,
+// textarea:focus,
+// button:focus {
+//   text-decoration: none;
+//   outline: none;
+// }
+
+// a:focus,
+// a:hover {
+//   text-decoration: none;
+// }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primaryColor);
+  border-radius: 2px;
+  cursor: pointer;
+  &:hover {
+    width: 7px;
+    transition: all linear 0.2s;
+    transform: scale(1.1);
+  }
+}
+
+.ant-btn {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+// Swiper
+@import 'swiper/css';
+@import 'swiper/css/grid';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+// ====== Breadcrumb ======
+.breadcrumb {
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 10;
+  @include md {
+    margin-bottom: 24px;
+  }
+  ol {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .breadcrumb_link {
+      text-transform: capitalize;
+      color: var(--primary-100);
+      @apply text-regular-12;
+      @include md {
+        @apply text-regular-14;
+      }
+      &.active {
+        color: var(--primary-25);
+      }
+      a {
+        color: inherit;
+      }
+    }
+    .breadcrumb_separator {
+      color: var(--primary-300);
+    }
+  }
+}
