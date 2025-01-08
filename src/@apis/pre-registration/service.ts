@@ -14,4 +14,16 @@ export const PreRegistrationService = {
       throw ErrorHandler(error);
     }
   },
+
+  async addDrop(semesterNumber, payload): Promise<IPreRegistrationResponse> {
+    try {
+      const data = await AxiosInstance.post(
+        `${END_POINT}/add-drop?semesterNumber=${encodeURIComponent(semesterNumber)}`,
+        payload,
+      );
+      return Promise.resolve(data?.data);
+    } catch (error) {
+      throw ErrorHandler(error);
+    }
+  },
 };

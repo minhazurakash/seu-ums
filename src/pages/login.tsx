@@ -1,5 +1,3 @@
-'use client';
-
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { useLogin } from '@apis/auth/hooks';
 import { apiMessages } from '@lib/constant';

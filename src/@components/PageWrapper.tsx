@@ -36,7 +36,7 @@ const PageWrapper: React.FC<IProps> = ({ children, ...customMeta }) => {
 
   const meta: IMeta = {
     title: '',
-    baseTitle: 'Visa Permit',
+    baseTitle: 'UMS',
     description: ``,
     image: ogImageUrl,
     url: `${ENV.appHostUrl}${router.locale ? '/' + router.locale : ''}${asPath}`,

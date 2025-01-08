@@ -41,7 +41,7 @@ interface PreregisteredSection {
   token4: string | null;
 }
 
-export interface Preregistration {
+export interface IPreregistration {
   semester: Semester;
   preregisteringForSemester: Semester;
   currentTime: string;
@@ -54,7 +54,9 @@ export interface Preregistration {
   offeredSectionList: OfferedSection[];
   preregisteredSectionList: PreregisteredSection[];
   takenCredits: number;
+  message: string;
+  status: string;
 }
 export interface IPreRegistrationResponse extends IBaseResponse {
-  data: Preregistration;
+  data: IPreregistration;
 }
