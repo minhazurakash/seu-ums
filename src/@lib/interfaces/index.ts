@@ -18,12 +18,14 @@ export interface IResponseMeta {
 }
 
 export interface IBaseResponse {
+  code?: string;
   success?: boolean;
+  description?: string;
   statusCode?: number;
   message?: string;
   errorMessages?: string[];
   meta?: IResponseMeta;
-  // data: [] | {} | null;
+  time?: string;
 }
 
 export interface IBaseFilterPayload {
