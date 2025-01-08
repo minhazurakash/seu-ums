@@ -3,7 +3,7 @@
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { useLogin } from '@apis/auth/hooks';
 import { apiMessages } from '@lib/constant';
-import { storage } from '@lib/utils';
+import { cookies } from '@lib/utils';
 import { Button, Checkbox, Form, Input, message } from 'antd';
 
 export default function LoginPage() {
@@ -17,7 +17,7 @@ export default function LoginPage() {
           messageApi.error('Login Failed');
           return;
         }
-        storage.setData('access-token', data?.data?.token);
+        cookies.setToken(data?.data?.token);
         messageApi.success(apiMessages.login);
       },
     },

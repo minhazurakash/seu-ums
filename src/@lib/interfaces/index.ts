@@ -20,6 +20,7 @@ export interface IResponseMeta {
 export interface IBaseResponse {
   code?: string;
   success?: boolean;
+  status?: string;
   description?: string;
   statusCode?: number;
   message?: string;

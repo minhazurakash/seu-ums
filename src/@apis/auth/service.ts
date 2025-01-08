@@ -2,7 +2,7 @@ import { AxiosInstance } from '@lib/config';
 import { ErrorHandler } from '@lib/utils';
 import { ILoginCreate, ILoginResponse } from './interfaces';
 
-const END_POINT: string = '/sign-in';
+const END_POINT: string = '/auth/v/2.0.0/sign-in';
 
 export const AuthService = {
   NAME: END_POINT,
